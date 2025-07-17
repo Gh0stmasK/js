@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Navbar with Icons</title>
+</head>
+
+<body class="m-0 bg-gray-100 font-sans text-black">
+    <nav class="w-full bg-gradient-to-r from-blue-400 via-indigo-600 to-gray-900 p-4 text-white">
+        <div class="flex flex-wrap items-center justify-between">
+            <ul class="flex space-x-6 list-none items-center">
+                <li class="hover:underline cursor-pointer">
+                    <i class="fas fa-house mr-2"></i>Home
+                </li>
+                <li class="hover:underline cursor-pointer">
+                    <i class="fas fa-info-circle mr-2"></i>About
+                </li>
+                <li class="hover:underline cursor-pointer">
+                    <i class="fas fa-envelope mr-2"></i>Contact
+                </li>
+            </ul>
+            <div class="flex items-center space-x-2 mt-4 sm:mt-0">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." id="search-input"
+                        class="px-3 py-1 pl-9 rounded-xl text-black font-semibold focus:outline-solid bg-white w-64 sm:w-80">
+                    <i class="fas fa-search absolute left-3 top-1.5 text-gray-500"></i>
+                </div>
+                <button
+                    class="bg-white text-indigo-700 font-semibold px-3 py-1 rounded-md hover:bg-gray-200 transition">
+                    <i class="fas fa-magnifying-glass mr-1"></i> Search
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="flex justify-center p-6 gap-4 my-4">
+        <h3 class="text-lg">sort by Title</h3>
+        <select class="px-3 py-1 rounded-md focus:outline-none font-semibold bg-slate-200 text-indigo-500"
+            id="sortTitle">
+            <option value="az">A - Z</option>
+            <option value="za">Z - A</option>
+        </select>
+
+        <h3 class="text-lg">sort by Price</h3>
+        <select class="px-3 py-1 rounded-md focus:outline-none font-semibold bg-slate-200 text-indigo-500"
+            id="sortPrice">
+            <option value="low">low to high</option>
+            <option value="high">high to low</option>
+        </select>
+    </div>
+    <div class="p-6">
+        <h1 class="text-2xl font-bold mb-4">Products</h1>
+        <div id="products" class="flex flex-wrap justify-center gap-6 p-4"></div>
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
