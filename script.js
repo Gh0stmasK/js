@@ -30,7 +30,7 @@ function displayProducts(products) {
     card.innerHTML = `
       <img src="${product.image}" alt="${product.title}" class="w-full h-40 object-contain mb-2 rounded" />
       <h2 class="text-sm font-semibold h-12 overflow-hidden">${product.title}</h2>
-      <p class="text-grey-600 font-medium">₹${product.price}</p>
+      <p class="text-grey-600 font-medium">₹${Math.round(85*product.price)}</p>
     `;
 
     container.appendChild(card);
